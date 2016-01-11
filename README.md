@@ -1,2 +1,2 @@
-# google-trends-analyze
+# google-trends
 Google Trends API implementation in Java
