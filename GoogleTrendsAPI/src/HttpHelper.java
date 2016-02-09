@@ -9,7 +9,7 @@ import org.apache.http.HttpEntity;
 public class HttpHelper {
 	
 	public static String ReadEntity(HttpEntity entity) throws UnsupportedOperationException, IOException{
-	  String string;
+	 	String string;
 		StringBuilder output = new StringBuilder();
 		if (entity.getContent() != null){
 			BufferedReader reader = new BufferedReader(new InputStreamReader(entity.getContent()));
