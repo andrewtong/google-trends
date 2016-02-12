@@ -1,0 +1,5 @@
+0.0.2
+
+Mainly revolves finding a method to authenticate user to google services to use the google trends api a number of times without being
+denied access.  A second way may involve using the cookie labeled under NID, although I would have to look up more into that, since it 
+appears that it is created during the time a browser is opened, but I am not sure if it changes, and how it could be retrieved.

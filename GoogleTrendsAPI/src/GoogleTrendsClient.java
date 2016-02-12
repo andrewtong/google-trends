@@ -10,7 +10,7 @@ import org.apache.http.client.ClientProtocolException;
 import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.HttpClients;
-
+import at.GT.HttpHelper.*;
 import at.GT.RequestCreater.*;
 
 public class GoogleTrendsClient {
@@ -30,23 +30,10 @@ public class GoogleTrendsClient {
 		HttpResponse response = httpclient.execute(post);
 		HttpEntity entity = response.getEntity();
 		
-		ReadEntity(entity);
+		HttpHelper.ReadEntity(entity);
 		
 	}
 	
-	public static void ReadEntity(HttpEntity entity) throws UnsupportedOperationException, IOException{
-		String string;
-		StringBuilder output = new StringBuilder();
-		if (entity.getContent() != null){
-			BufferedReader reader = new BufferedReader(new InputStreamReader(entity.getContent()));
-			
-	        while ((string = reader.readLine()) != null) {
-	            output.append(string);
-	        }
-	        reader.close();
-		}
-        System.out.println(output.toString());
-	}
 
 	public static void main(String[] args) {
 		String request = CreateRequest("java");
